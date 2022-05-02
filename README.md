@@ -14,3 +14,6 @@ htpps://anitinky13.github.io/run-buddy/
 
 ## Contribution
 Made with ❤️ by Anastasiya
+
+
+### ©️2019 Run Buddy, Inc
