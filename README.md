@@ -10,7 +10,7 @@ A website that offers fitness training service.
 * CSS
 
 ## WEBSITE
-htpps://anitinky13.github.io/run-buddy/
+https://anitinky13.github.io/Run-Buddy/
 
 ## Contribution
 Made with ❤️ by Anastasiya
