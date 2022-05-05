@@ -6,12 +6,19 @@
 body {
     /* more on this crazy alphanumerical value in a minute! */
     background-image: url("../images/hero-bg.jpg");
-    padding: 60px;
     color: #39a6b2;
     font-family: Helvetica, Arial, sans-serif;
 }
 /* apply styles to <header> */
 header {
+  position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-image: url(assets/images/hero-bg.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-position: 80%;
     padding: 20px 35px;
     background-color: #39a6b2;
     display: flex;
@@ -19,6 +26,7 @@ header {
     flex-wrap: wrap;
   }
   header h1 {
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
     font-weight: bold;
     font-size: 36px;
     color: #fce138;
@@ -44,6 +52,13 @@ header nav ul li a {
   padding: 10px 15px;
   font-weight: lighter;
   font-size: 1.55vw;
+  text-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+header nav ul li a:hover {
+  background: #fce138;
+  color: #024e76;
+  border-radius: 15px;
+  text-shadow: none;
 }
 footer {
   display: flex;
@@ -72,6 +87,9 @@ section {
 .hero {
   background-image: url(assets/images/hero-bg.jpeg);
   background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-position: 80%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -79,9 +97,11 @@ section {
    }
 /* Hero Style End */
 .hero-form {
-  width: 40%;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  width: 450px;
   margin: 3.5%;
-  background-color: #fce138;
+  background-color: #fce138 (rgba 252, 225, 56, 0.8);
   padding: 20px;
   color: #024e76;
   border: solid 3px #024e76;
@@ -94,6 +114,7 @@ section {
   margin: 5px 0 15px 0;
 }
 .form-input {
+  border-radius: 10px;
   border: 1px solid #024e76;
   display: block;
   padding: 7px 15px;
@@ -101,16 +122,22 @@ section {
   color: #024e76;
   width: 100%;
   margin-bottom: 15px;
+  background-color: rgba(255,255,255, 0.75);
 }
+
 .hero-form label {
 margin: 0 5px;
 }
 .hero-form button {
+  border-radius: 10px;
   color: #fce138;
   background-color: #024e76;
   border: none;
   padding: 10px 20px;
   font-size: 16px;
+}
+.hero-form button:hover {
+  background-color: #39a6b2
 }
 .hero-cta { 
   width: 35%;
@@ -124,6 +151,7 @@ margin: 0 5px;
   font-style: italic;
   font-size: 55px;
   color: #fce138;
+  text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
  /*HERO STYLES END */
  .intro p {
@@ -270,6 +298,7 @@ flex: 1 30%;
   max-width: 100%;
 }
 .contact-form input, .contact-form textarea {
+  border-radius: 10px;
   border: 1px solid #024e76;
   display: block;
   padding: 7px 15px;
@@ -280,6 +309,7 @@ flex: 1 30%;
   margin-top: 5px;
 }
 .contact-form button {
+  border-radius: 10px;
   width: 100%;
   border: none;
   background: #fce138;
@@ -287,6 +317,11 @@ flex: 1 30%;
   text-align: center;
   padding: 15px 0;
   font-size: 16px;
+}
+ .contact-form button:hover {
+   color:#fce138;
+   background: #39a6b2;
+ }
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 @media screen and (max-width: 980px) {
   header {
@@ -295,6 +330,7 @@ flex: 1 30%;
   }
 
   header h1 {
+    position: relative;
     width: 100%;
     text-align: center;
   }
@@ -395,3 +431,7 @@ flex: 1 30%;
     order: 3;
   }
 }
+/* create a new rule for focus state*/
+ .form-input:focus {
+   background-color:rgba(255,255,255, 1);
+   }
